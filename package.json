@@ -1,6 +1,6 @@
 {
   "name": "zeal_frontend",
-  "homepage": "https://jainprakshal.github.io/",
+  "homepage": "https://jainprakshal.github.io/Zeal/",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8000",
