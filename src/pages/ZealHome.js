@@ -36,6 +36,7 @@ class ZealHome extends React.Component {
           <div className="d-flex align-items-center">
             <Navbar.Collapse id="navbar-default-primary">
               <Nav className="navbar-nav-hover align-items-lg-center">
+                <Nav.Link as={Link} to={Routes.DashboardOverview.path}>Dashboard</Nav.Link>
                 <Nav.Link as={HashLink} to="#about">About</Nav.Link>
                 <Nav.Link as={Link} to={Routes.Signin.path}>Sign In</Nav.Link>
                 <Nav.Link as={Link} to={Routes.Signup.path}>Sign Up</Nav.Link>
