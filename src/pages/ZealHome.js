@@ -88,22 +88,33 @@ class ZealHome extends React.Component {
     return false
   }
 
+  renderHeader = () => {
+    return (
+      <section className="section-header overflow-hidden pt-5 pt-lg-6 pb-9 pb-lg-12 text-white bg-primary" id="home">
+        <Container className="hero-container">
+          <Row>
+            <Col xs={12} className="text-center">
+              {/* Edit styling at: zeal_frontend/src/scss/volt/components/_icon-box.scss */}
+              {/* <div className="react-big-icon d-none d-lg-block"><Image src={ZealBackground} alt="Zeal Background Image" /></div> */}
+              <h1 className="fw-bolder text-secondary">ZEAL</h1>
+              <p className="fw-light mb-5 h5">Build High Performing Teams</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button as={Link} to={Routes.DashboardOverview.path} variant="secondary">Visit Dashboard <FontAwesomeIcon icon={faExternalLinkAlt} className="ms-1" /></Button>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    )
+  }
+
   render() {
     return (
       <div>
         {this.renderNavBar()}
-        <section className="section-header overflow-hidden pt-5 pt-lg-6 pb-9 pb-lg-12 text-white bg-primary" id="home">
-          <Container className="hero-container">
-            <Row>
-              <Col xs={12} className="text-center">
-                {/* Edit styling at: zeal_frontend/src/scss/volt/components/_icon-box.scss */}
-                <div className="react-big-icon d-none d-lg-block"><Image src={ZealBackground} alt="Zeal Background Image" /></div>
-                <h1 className="fw-bolder text-secondary">Zeal</h1>
-                <p className="fw-light mb-5 h5">Build High Performing Teams</p>
-              </Col>
-            </Row>
-          </Container>
-        </section>
+        {this.renderHeader()}
 
         <section className="section section-md bg-soft pt-lg-6" id="about">
           <Container>
@@ -113,7 +124,7 @@ class ZealHome extends React.Component {
                 <p className="mb-3 lead fw-bold">Zeal is a teammate and resource finding tool.</p>
                 <p className="mb-4">One of the biggest problems that university students, startups, and corporates face is finding worthy teammates with the right skillsets, who can help turn their ideas into reality.</p>
                 <p className="mb-4">Steve Jobs once said: "To me, ideas are worth nothing unless executed. They are just a multiplier. Execution is worth millions."</p>
-                <Button as={Link} to={Routes.DashboardOverview.path} variant="secondary" target="_blank">Visit Dashboard <FontAwesomeIcon icon={faExternalLinkAlt} className="ms-1" /></Button>
+                <Button as={Link} to={Routes.DashboardOverview.path} variant="secondary">Visit Dashboard <FontAwesomeIcon icon={faExternalLinkAlt} className="ms-1" /></Button>
               </Col>
               <Col lg={6} className="order-lg-1">
                 <Image src={AboutZealOne} alt="Finding perfect team members through zeal is incredibly easy." />
